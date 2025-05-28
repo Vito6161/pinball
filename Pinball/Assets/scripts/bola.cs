@@ -16,12 +16,10 @@ public class bola : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D colisao)
     {
-        Debug.Log("bateuuuuuuuuuuuuu");
 
         if (colisao.collider.CompareTag("chão"))
         {
             Destroy(gameObject);
-            Debug.Log("bateu");
         }
     }
 }
