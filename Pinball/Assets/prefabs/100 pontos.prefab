@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 8870842512510840288}
   - component: {fileID: 8003066752129849154}
   - component: {fileID: 4417545007349036259}
-  - component: {fileID: 4024167963510480487}
   m_Layer: 0
   m_Name: 100 pontos
-  m_TagString: Untagged
+  m_TagString: 100 pontos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,17 +124,3 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1.1449999
---- !u!114 &4024167963510480487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6627199104327619882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5823e1eaff98004a9563a3e2eb9e4d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "pontua\xE7\xE3oTotal": 0
-  valorPontos: 100
