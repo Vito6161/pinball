@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - "ch\xE3o"
+  - 50 pontos
+  - 25 pontos
+  - 100 pontos
+  - inicio
   layers:
   - Default
   - TransparentFX

@@ -3,30 +3,26 @@ using UnityEngine;
 public class bola : MonoBehaviour
 {
     public int pontuaçãoTotal;
+    private Rigidbody2D rb;
+    private float forcaImpulso = 30f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter2D(Collision2D colisao) 
     {
-
-    }
-
-    void OnCollisionEnter2D(Collision2D colisao)
-    {
-        if (colisao.collider.CompareTag("chão"))
+        if (colisao.collider.CompareTag("chão")) // destroi a bola caso ela encoste no chão
         {
             Destroy(gameObject);
+            Debug.Log("VOCÊ PERDEU!!!!!!!");
         }
     }
 
     void OnTriggerEnter2D(Collider2D colisao)
     {
-        if (colisao.CompareTag("25 pontos"))
+        if (colisao.CompareTag("25 pontos")) //sistema de pontuação
         {
             pontuaçãoTotal += 25;
         }
@@ -40,5 +36,20 @@ public class bola : MonoBehaviour
         }
 
         Debug.Log(pontuaçãoTotal);
+    }
+
+    void OnTriggerStay2D(Collider2D area)
+    {
+        if (area.CompareTag("inicio")) //sistema de impulso inicial
+        {
+            if(Input.GetKey(KeyCode.UpArrow))
+            {
+                rb.AddForce(Vector2.up * forcaImpulso, ForceMode2D.Impulse);
+            }
+
+
+            
+        }
+        
     }
 }
