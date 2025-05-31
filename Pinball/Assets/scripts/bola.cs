@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class bola : MonoBehaviour
 {
     public int pontuaçãoTotal;
     private Rigidbody2D rb;
     private float forcaImpulso = 30f;
-
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,6 +18,7 @@ public class bola : MonoBehaviour
         {
             Destroy(gameObject);
             Debug.Log("VOCÊ PERDEU!!!!!!!");
+            Debug.Log("aperte R para reiniciar!");         
         }
     }
 
@@ -46,10 +48,9 @@ public class bola : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * forcaImpulso, ForceMode2D.Impulse);
             }
-
-
-            
+  
         }
         
     }
+
 }
